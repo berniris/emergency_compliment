@@ -1,16 +1,12 @@
 <h1> Hello, welcome. </h1>
 
 
-<%# class Greeting
-#   attr_reader :name
-# def initialize(name)
-#   @name = name
-# end
-# def greet (name)
-#   @name = gets.chomp
-#   @name.capitalize!
-# end
-# end
+<% def greet
+   @name = gets.chomp
+   @name.capitalize!
+   return @name
+ end
+
 %>
 
 <% compliments = [
@@ -32,3 +28,4 @@ end
 <p> <%= retrieve_random_compliment(compliments) %> </p>
 <p> <%= link_to "I'm still emotionally vacant. Give me another compliment.", "/" %> </p>
 <p> <%= link_to "I'm ready to soldier on.", "https://ruby-doc.org/" %> </p>
+<p> <%= link_to "Hi, #{greet}", "/show" %> </p>
