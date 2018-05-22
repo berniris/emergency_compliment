@@ -22,5 +22,13 @@
   "You are the moon of my life...my sun and stars"
 ]
 
+def retrieve_random_compliment(arr)
+  random_comp = rand(arr.length)
+  get_compliment = arr[random_comp]
+  return get_compliment
+end
 %>
-<p> <%= compliments[5] %> </p>
+
+<p> <%= retrieve_random_compliment(compliments) %> </p>
+<p> <%= link_to "I'm still emotionally vacant. Give me another compliment.", "/" %> </p>
+<p> <%= link_to "I'm ready to soldier on.", "https://ruby-doc.org/" %> </p>
