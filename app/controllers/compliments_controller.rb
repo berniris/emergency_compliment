@@ -2,8 +2,13 @@ class ComplimentsController < ApplicationController
 def index
 end
 
+def new
+  end
+
 def show
-  @name =Compliments.find(params[:id])
+  def intialize(name)
+  @name =  Compliments.find(params[:id])
+end
 end
 
 end

@@ -1,9 +1,12 @@
 <h1> Hello, welcome. </h1>
 
 
-<% def greet
+<% class Greet
+attr_reader :name
+def greet (name)
+def initialize(name)
    @name = gets.chomp
-   @name.capitalize!
+   @name = .capitalize!
    return @name
  end
 
